@@ -10,32 +10,32 @@ const fadeInUp = {
 
 const projects = [
   {
+    title: "Image Super-Resolution using GANs",
+    description: "Implemented SRGAN using PyTorch with a custom Perceptual Loss function to upscale low-resolution images by 4x. Trained on DIV2K dataset, achieving a PSNR of 29.22 and SSIM of 0.846.",
+    tags: ["Python", "PyTorch", "OpenCV", "Torchvision", "NumPy"],
+    year: "2025",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800", 
+  },
+  {
+    title: "Intelligent Document Summarizer & Q&A System",
+    description: "Advanced NLP platform for summarizing PDFs using BART-Large-CNN. Built a RAG pipeline with Sentence Transformers and RoBERTa for precise semantic search and context-aware Q&A via a Streamlit UI.",
+    tags: ["Python", "Streamlit", "Hugging Face", "PyTorch", "RAG"],
+    year: "2024",
+    image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&q=80&w=800", 
+  },
+  {
+    title: "Service Desk Ticket Classifier",
+    description: "Developed a Convolutional Neural Network (CNN) to classify support tickets into 5 distinct categories. Integrated automated SMTP email routing to instantly direct tickets to relevant departments.",
+    tags: ["Python", "PyTorch", "Streamlit", "SMTP", "NLTK", "Pandas"],
+    year: "2025",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800", 
+  },
+  {
     title: "AI Personal Stylist & Wardrobe Manager",
-    description: "An AI-powered mobile application for wardrobe management featuring virtual try-on technology and smart, data-driven styling recommendations.",
-    tags: ["Flutter", "FastAPI", "FashionCLIP", "IDM-VTON"],
+    description: "An AI-powered application for wardrobe management featuring virtual try-on technology and smart, data-driven styling recommendations.",
+    tags: ["Flutter", "FastAPI", "Deep Learning", "Computer Vision"],
     year: "2026",
-    image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&q=80&w=800", // Placeholder: Fashion/Tech
-  },
-  {
-    title: "Generative Image Synthesis (cGAN)",
-    description: "Implemented and trained Conditional Generative Adversarial Networks (cGAN) for advanced computer vision and image generation tasks.",
-    tags: ["PyTorch", "Deep Learning", "Computer Vision"],
-    year: "2026",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800", // Placeholder: AI Art/Networks
-  },
-  {
-    title: "Digital Image Processing Suite",
-    description: "A comprehensive project implementing core image processing algorithms, filters, and mathematical transformations for visual data analysis.",
-    tags: ["Python", "OpenCV", "NumPy", "Image Processing"],
-    year: "2025",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800", // Placeholder: Cyber/Vision
-  },
-  {
-    title: "Custom Neural Network Implementation",
-    description: "Built a shallow neural network completely from scratch to develop a deep mathematical understanding of forward propagation and gradient descent.",
-    tags: ["Python", "Mathematics", "Machine Learning"],
-    year: "2025",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800", // Placeholder: Circuit/Tech
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800", 
   },
 ];
 
@@ -44,7 +44,7 @@ const Projects = () => {
     <section id="projects" className="section-spacing">
       <div className="container">
         <motion.div {...fadeInUp}>
-          <h2 className="text-display text-3xl mb-4">Featured Work</h2>
+          <h2 className="text-display text-3xl mb-4">Featured Projects</h2>
           <div className="w-16 h-1 bg-primary rounded-full mb-12 shadow-[0_0_10px_hsl(var(--primary))]" />
         </motion.div>
 
@@ -58,8 +58,7 @@ const Projects = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="group rounded-[24px] overflow-hidden glass-card glass-card-hover flex flex-col"
             >
-              {/* Image Container */}
-              <div className="relative w-full h-56 overflow-hidden">
+              <div className="relative w-full h-48 overflow-hidden border-b border-white/10">
                 <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors z-10 duration-500" />
                 <img 
                   src={project.image} 
@@ -68,7 +67,6 @@ const Projects = () => {
                 />
               </div>
 
-              {/* Content */}
               <div className="p-6 flex-grow flex flex-col">
                 <div className="flex items-start justify-between mb-3">
                   <span className="text-xs font-semibold text-primary tabular-nums tracking-wider uppercase">{project.year}</span>

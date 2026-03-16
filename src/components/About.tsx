@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Brain, Image as ImageIcon, Smartphone } from "lucide-react";
+import { Code, Brain, Trophy, Terminal } from "lucide-react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 12 },
@@ -9,16 +9,15 @@ const fadeInUp = {
 };
 
 const highlights = [
-  { icon: Brain, label: "Deep Learning", desc: "Neural networks, GANs & foundational models" },
-  { icon: ImageIcon, label: "Computer Vision", desc: "Digital image processing & synthesis" },
-  { icon: Smartphone, label: "App Development", desc: "Cross-platform mobile & backend APIs" },
-  { icon: Code, label: "AI Integration", desc: "Deploying models into production environments" },
+  { icon: Brain, label: "Deep Learning", desc: "PyTorch, CNNs, GANs & NLP pipelines" },
+  { icon: Terminal, label: "Problem Solving", desc: "150+ DSA solutions on LeetCode/HackerRank" },
+  { icon: Trophy, label: "Academic Excellence", desc: "9.48 CGPA in B.Tech CS (AI & ML)" },
+  { icon: Code, label: "Software Dev", desc: "RESTful APIs & Data Automation" },
 ];
 
 const About = () => {
   return (
     <section id="about" className="section-spacing relative">
-      {/* Subtle background glow effect */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 -z-10" />
 
       <div className="container relative z-10">
@@ -30,15 +29,15 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <motion.div {...fadeInUp}>
             <p className="text-body mb-5 text-lg">
-              I'm an AI/ML Engineer driven by a passion for computer vision, digital image processing, and deep learning. I specialize in taking complex, state-of-the-art models and bridging the gap between research and practical software applications.
+              I am a dedicated Computer Science student specializing in Artificial Intelligence and Machine Learning. I have a proven track record of academic excellence (9.48 CGPA) and a fierce passion for algorithmic problem-solving, having conquered over 150+ DSA challenges across competitive platforms.
             </p>
             <p className="text-body text-lg">
-              Whether I'm implementing neural networks from scratch, experimenting with Generative Adversarial Networks (GANs), or integrating advanced vision models into mobile applications, I focus on building intelligent systems that are technically robust and beautifully user-centric.
+              My hands-on experience spans from developing sophisticated deep learning models—like Custom GANs and RAG-based NLP systems—to streamlining business operations through scalable API development and data analytics. I'm driven by the desire to build robust, intelligent systems that make a measurable impact.
             </p>
           </motion.div>
 
           <motion.div {...fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {highlights.map(({ icon: Icon, label, desc }, idx) => (
+            {highlights.map(({ icon: Icon, label, desc }) => (
               <motion.div
                 whileHover={{ y: -5 }}
                 key={label}

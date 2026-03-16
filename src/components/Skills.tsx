@@ -10,19 +10,19 @@ const fadeInUp = {
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "Dart", "JavaScript", "TypeScript", "SQL", "C++"],
+    skills: ["Python", "C", "C++", "SQL"],
   },
   {
-    title: "ML / AI",
-    skills: ["PyTorch", "TensorFlow", "Keras", "OpenCV", "FashionCLIP", "Scikit-learn"],
+    title: "Frameworks & ML",
+    skills: ["PyTorch", "TensorFlow", "Keras", "Scikit-Learn", "OpenCV", "Pandas", "NumPy", "NLTK"],
   },
   {
-    title: "Web & Mobile",
-    skills: ["Flutter", "FastAPI", "React", "Node.js", "RESTful APIs"],
+    title: "Web & Databases",
+    skills: ["Django", "Flask", "Streamlit", "MySQL", "MongoDB", "HTML/CSS"],
   },
   {
-    title: "Data & Tools",
-    skills: ["Pandas", "NumPy", "Git", "Docker", "Jupyter / Colab"],
+    title: "Tools & Platforms",
+    skills: ["Git", "GitHub", "VS Code", "RESTful APIs", "SMTP", "Hugging Face"],
   },
 ];
 

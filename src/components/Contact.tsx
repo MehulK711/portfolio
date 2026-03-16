@@ -34,9 +34,9 @@ const Contact = () => {
             </p>
             <div className="space-y-4">
               {[
-                { icon: Mail, label: "mehul@example.com" },
-                { icon: Phone, label: "+91 98765 43210" },
-                { icon: MapPin, label: "New Delhi, India" },
+                { icon: Mail, label: "mehulk711@gmail.com" },
+                { icon: Phone, label: "+91 8302490871" },
+                { icon: MapPin, label: "Udaipur, India" },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">

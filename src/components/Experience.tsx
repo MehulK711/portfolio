@@ -10,61 +10,67 @@ const fadeInUp = {
 
 const experiences = [
   {
-    role: "ML Engineer Intern",
-    company: "Tech Startup",
-    period: "Jun 2024 – Present",
-    description: "Developing and deploying ML models for production. Engineered data pipelines processing 1M+ records daily. Improved model accuracy by 15% through feature engineering.",
+    role: "Python Development Intern",
+    company: "Devnex Technologies, Bangaluru",
+    date: "May 2025 - June 2025",
+    bullets: [
+      "Developed and maintained scalable RESTful APIs using Django and Flask to support web application features.",
+      "Automated data processing pipelines using Python scripts, reducing manual entry time by 40%.",
+      "Collaborated with the engineering team to debug and optimize existing codebases, improving application performance."
+    ]
   },
   {
-    role: "Research Assistant",
-    company: "University AI Lab",
-    period: "Jan 2023 – May 2024",
-    description: "Conducted research on transformer architectures for NLP tasks. Published findings on efficient fine-tuning methods. Collaborated with cross-functional teams on applied ML projects.",
-  },
-  {
-    role: "Data Science Intern",
-    company: "Analytics Corp",
-    period: "May 2022 – Dec 2022",
-    description: "Built predictive models for customer churn analysis. Automated reporting workflows reducing manual effort by 40%. Created dashboards for real-time business intelligence.",
-  },
+    role: "Data Analyst",
+    company: "Local Business",
+    date: "May 2024 - October 2024",
+    bullets: [
+      "Designed interactive dashboards using Matplotlib and Seaborn to visualize key business KPIs for senior leadership.",
+      "Performed data cleaning and preprocessing on raw datasets using Pandas, ensuring 99% data accuracy.",
+      "Transformed raw operational data into actionable business insights, driving a 15% increase in operational efficiency."
+    ]
+  }
 ];
 
 const Experience = () => {
   return (
-    <section id="experience" className="section-spacing bg-surface">
-      <div className="container">
+    <section id="experience" className="section-spacing relative">
+      <div className="container relative z-10">
         <motion.div {...fadeInUp}>
           <h2 className="text-display text-3xl mb-4">Experience</h2>
-          <div className="w-16 h-1 bg-primary rounded-full mb-12" />
+          <div className="w-16 h-1 bg-primary rounded-full mb-12 shadow-[0_0_10px_hsl(var(--primary))]" />
         </motion.div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-5 top-0 bottom-0 w-px bg-border hidden md:block" />
-
-          <div className="space-y-8">
-            {experiences.map((exp) => (
-              <motion.div
-                key={exp.role}
-                {...fadeInUp}
-                className="relative md:pl-16"
-              >
-                {/* Timeline dot */}
-                <div className="hidden md:flex absolute left-0 top-1 w-10 h-10 rounded-full bg-primary/10 items-center justify-center">
-                  <Briefcase className="w-4 h-4 text-primary" />
+        <div className="space-y-6">
+          {experiences.map((exp, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.4 }}
+              className="glass-card p-6 md:p-8 rounded-[24px] border-l-4 border-l-primary"
+            >
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                <div>
+                  <h3 className="text-xl font-display font-semibold text-foreground flex items-center gap-2">
+                    <Briefcase className="w-5 h-5 text-primary" /> {exp.role}
+                  </h3>
+                  <p className="text-primary/80 font-medium text-sm mt-1">{exp.company}</p>
                 </div>
-
-                <div className="rounded-[24px] bg-card p-6 card-shadow">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <h3 className="text-base font-semibold text-foreground">{exp.role}</h3>
-                    <span className="text-xs font-medium text-muted-foreground tabular-nums">{exp.period}</span>
-                  </div>
-                  <p className="text-sm font-medium text-primary mb-2">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                <span className="text-xs font-medium text-muted-foreground bg-white/5 px-3 py-1 rounded-full w-fit">
+                  {exp.date}
+                </span>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="text-primary mr-2 mt-1">•</span>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
