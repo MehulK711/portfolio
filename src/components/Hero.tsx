@@ -49,8 +49,8 @@ const Hero = () => {
 
             <div className="flex items-center gap-4">
               {[
-                { icon: Github, href: "https://github.com/" },
-                { icon: Linkedin, href: "https://linkedin.com/" },
+                { icon: Github, href: "https://github.com/MehulK711" },
+                { icon: Linkedin, href: "https://linkedin.com/in/mehul-k711/" },
                 { icon: Twitter, href: "#" },
                 { icon: Mail, href: "mailto:mehulk711@gmail.com" },
               ].map(({ icon: Icon, href }, i) => (

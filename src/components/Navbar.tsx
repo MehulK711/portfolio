@@ -31,10 +31,17 @@ const Navbar = () => {
               {link}
             </button>
           ))}
-          <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity duration-200">
+          
+          {/* UPDATED: Changed button to anchor tag for Desktop */}
+          <a 
+            href="/Mehul_resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity duration-200 hover:shadow-[0_0_15px_rgba(var(--primary),0.5)]"
+          >
             <Download className="w-4 h-4" />
             Resume
-          </button>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -62,10 +69,17 @@ const Navbar = () => {
                   {link}
                 </button>
               ))}
-              <button className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold mt-2">
+              
+              {/* UPDATED: Changed button to anchor tag for Mobile */}
+              <a 
+                href="/Mehul_resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold mt-2"
+              >
                 <Download className="w-4 h-4" />
                 Resume
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
