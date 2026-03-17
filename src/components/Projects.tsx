@@ -34,7 +34,7 @@ const projects = [
     title: "AI Personal Stylist & Wardrobe Manager",
     description: "An AI-powered application for wardrobe management featuring virtual try-on technology and smart, data-driven styling recommendations.",
     tags: ["Flutter", "FastAPI", "Deep Learning", "Computer Vision"],
-    year: "2026",
+    year: "Present",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800", 
   },
 ];
