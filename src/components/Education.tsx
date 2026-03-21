@@ -22,8 +22,8 @@ const certifications = [
     issuer: "Electronic Arts (Forage)",
   },
   {
-    name: "NPTEL Elite Silver (Top 2%)",
-    issuer: "Ethics in Engineering & Soft Skills",
+    name: "Ethics in Engineering & Soft Skills",
+    issuer: "NPTEL Elite Silver (Top 2%)",
   },
   {
     name: "CS201: Data Structures",
@@ -100,6 +100,11 @@ const Education = () => {
             </div>
             <h3 className="text-xl font-display font-semibold mb-4">Key Achievements</h3>
             <ul className="space-y-4 text-sm text-muted-foreground">
+              {/* GATE Qualification Added Here */}
+              <li className="flex items-start">
+                <span className="text-primary mr-2 mt-0.5">✦</span>
+                <p><strong className="text-foreground">GATE 2026 (DA):</strong> Qualified the Graduate Aptitude Test in Engineering in Data Science & Artificial Intelligence.</p>
+              </li>
               <li className="flex items-start">
                 <span className="text-primary mr-2 mt-0.5">✦</span>
                 <p><strong className="text-foreground">Coding Profile:</strong> 5-Star Badge in Python & C on HackerRank; Solved 150+ DSA problems on LeetCode/HackerRank.</p>

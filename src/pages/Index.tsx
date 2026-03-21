@@ -6,8 +6,7 @@ import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-// If you have a Footer component, you can import it here too!
-// import Footer from "@/components/Footer"; 
+import Footer from "@/components/Footer"; 
 
 const Index = () => {
   return (
@@ -25,7 +24,7 @@ const Index = () => {
         <Contact />
       </main>
 
-      {/* <Footer /> */}
+      {<Footer />}
     </div>
   );
 };

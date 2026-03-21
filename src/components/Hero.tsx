@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, ArrowDown, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, MapPin } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const transition = { duration: 0.4, ease: [0.2, 0, 0, 1] as const };
@@ -51,7 +51,6 @@ const Hero = () => {
               {[
                 { icon: Github, href: "https://github.com/MehulK711" },
                 { icon: Linkedin, href: "https://linkedin.com/in/mehul-k711/" },
-                { icon: Twitter, href: "#" },
                 { icon: Mail, href: "mailto:mehulk711@gmail.com" },
               ].map(({ icon: Icon, href }, i) => (
                 <a
